@@ -19,9 +19,9 @@ function clearMarkup() {
 }
 
 function onInput(e) {
-  const country = e.target.value.trim();
-
   clearMarkup();
+
+  const country = e.target.value.trim();
 
   if (country) {
     fetchCountries(country)
@@ -33,13 +33,10 @@ function onInput(e) {
           return;
         }
         if (data.length > 1 && data.length <= 10) {
-          console.log(data);
-          const markup = countryListTemplate(data);
-          refs.countryListRef.innerHTML = markup;
+          refs.countryListRef.innerHTML = countryListTemplate(data);
           return;
         }
-        const markup = countryTemplate(data[0]);
-        refs.countryInfoRef.innerHTML = markup;
+        refs.countryInfoRef.innerHTML = countryTemplate(data[0]);
       })
       .catch(() => Notify.failure('Oops, there is no country with that name'));
   }
