@@ -38,7 +38,7 @@ function onInput(e) {
         }
         refs.countryInfoRef.innerHTML = countryTemplate(data[0]);
       })
-      .catch(() => Notify.failure('Oops, there is no country with that name'));
+      .catch(err => Notify.failure(err.message));
   }
 }
 

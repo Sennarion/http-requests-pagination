@@ -17,6 +17,7 @@
 <p class='country-info__body'>
   <span class='country-info__label'>Languages:</span>
   {{#each this.languages}}
-    {{this}},
+    {{#if @last}}{{this}}{{/if}}
+    {{#unless @last}}{{this}},{{/unless}}
   {{/each}}
 </p>
