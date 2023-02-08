@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://sennarion.github.io/http-requests-pagination",
+  "homepage": "https://sennarion.github.io/hw-js-http-requests",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /http-requests-pagination/"
+    "build": "parcel build src/*.html --public-url /hw-js-http-requests/"
   },
   "repository": {
     "type": "git",
